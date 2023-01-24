@@ -1,5 +1,7 @@
 FROM node:14
-EXPOSE 3000
+ARG PORT=6000
+ENV PORT=${PORT}
+EXPOSE ${PORT}
 WORKDIR /home/brasil14/app-node
 COPY package*.json ./
 COPY . .
